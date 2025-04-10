@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+ <html lang="en">
+ 
+
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Performance Tracker</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+ </head>
+ 
+
+ <body>
+  <!-- Header -->
+  <header class="header">
+  <div class="container text-center">
+  <h1>Work Performance Tracker</h1>
+  <p>Track, Evaluate, and Optimize Employee Performance</p>
+  <button id="darkModeToggle" class="btn btn-outline-light"><i class="fas fa-moon"></i> Dark Mode</button>
+  </div>
+  </header>
+ 
+
+  <!-- Main Content -->
+  <main class="container">
+  <!-- Goal and Objective Tracker -->
+  <section class="card neumorphism-card">
+  <div class="card-body">
+  <h2 class="card-title"><i class="fas fa-bullseye"></i> Goal & Objective Tracker</h2>
+  <form id="goalForm">
+  <div class="form-group">
+  <label for="goalName">Goal Name</label>
+  <input type="text" class="form-control" id="goalName" placeholder="Enter goal name" required>
+  <div class="invalid-feedback">Please enter a goal name.</div>
+  </div>
+  <div class="form-group">
+  <label for="goalDeadline">Deadline</label>
+  <input type="date" class="form-control" id="goalDeadline" required>
+  <div class="invalid-feedback">Please select a deadline.</div>
+  </div>
+  <div class="form-group">
+  <label for="keyMetrics">Key Metrics</label>
+  <textarea class="form-control" id="keyMetrics" rows="3" placeholder="Enter key metrics to track"
+  required></textarea>
+  <div class="invalid-feedback">Please enter key metrics.</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Add Goal</button>
+  </form>
+  <ul id="goalList" class="list-group mt-3">
+  </ul>
+  </div>
+  </section>
+ 
+
+  <!-- Performance Reviews -->
+  <section class="card neumorphism-card">
+  <div class="card-body">
+  <h2 class="card-title"><i class="fas fa-star"></i> Performance Reviews</h2>
+  <form id="reviewForm">
+  <div class="form-group">
+  <label for="employeeName">Employee Name</label>
+  <input type="text" class="form-control" id="employeeName" placeholder="Enter employee name" required>
+  <div class="invalid-feedback">Please enter the employee's name.</div>
+  </div>
+  <div class="form-group">
+  <label for="reviewerType">Reviewer Type</label>
+  <select class="form-control" id="reviewerType">
+  <option value="manager">Manager</option>
+  <option value="peer">Peer</option>
+  </select>
+  </div>
+  <div class="form-group">
+  <label for="performanceRating">Performance Rating (1-5)</label>
+  <input type="number" class="form-control" id="performanceRating" min="1" max="5" required>
+  <div class="invalid-feedback">Please enter a rating between 1 and 5.</div>
+  </div>
+  <div class="form-group">
+  <label for="reviewComments">Comments</label>
+  <textarea class="form-control" id="reviewComments" rows="3" placeholder="Enter your comments"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit Review</button>
+  </form>
+  <ul id="reviewList" class="list-group mt-3">
+  </ul>
+  </div>
+  </section>
+ 
+
+  <!-- Progress Dashboard -->
+  <section class="card neumorphism-card">
+  <div class="card-body">
+  <h2 class="card-title"><i class="fas fa-chart-bar"></i> Progress Dashboard</h2>
+  <div class="row">
+  <div class="col-md-4">
+  <div class="card neumorphism-card text-center">
+  <div class="card-body">
+  <h5 class="card-title">Goals Completed</h5>
+  <p class="card-text" id="goalsCompleted">0</p>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="card neumorphism-card text-center">
+  <div class="card-body">
+  <h5 class="card-title">Reviews Given</h5>
+  <p class="card-text" id="reviewsGiven">0</p>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="card neumorphism-card text-center">
+  <div class="card-body">
+  <h5 class="card-title">Average Rating</h5>
+  <p class="card-text" id="averageRating">N/A</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <canvas id="performanceChart" width="400" height="200"></canvas>
+  </div>
+  </section>
+ 
+
+  <!-- Notifications -->
+  <div id="notificationArea" class="mt-3">
+  </div>
+  </main>
+ 
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="container text-center">
+  <p>&copy; 2024 Work Performance Tracker</p>
+  </div>
+  </footer>
+ 
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+ </body>
+ 
+
+ </html>
