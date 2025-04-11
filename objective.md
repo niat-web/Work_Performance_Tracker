@@ -5,7 +5,7 @@
 This project provides a simple web-based application for tracking work performance, including goal setting, performance reviews, and a progress dashboard. It utilizes HTML, CSS, and JavaScript to create an interactive user interface. The JavaScript code handles form submissions, data manipulation, dynamic updates, and charting using Chart.js. The application also features a dark/light mode toggle for improved user experience.
 
 ## Output
-<iframe src="https://github.com/niat-web/Work_Performance_Tracker" height="1000" width="300" title="Work_Performance_Tracker"></iframe>
+<iframe src="https://niat-web.github.io/Work_Performance_Tracker/" height="1000" width="300" title="Work_Performance_Tracker"></iframe>
 
 ## Project Requirements
 **Technologies:** HTML, CSS, JavaScript, Chart.js
